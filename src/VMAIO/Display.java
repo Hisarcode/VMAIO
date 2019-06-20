@@ -12,5 +12,3 @@ package VMAIO;
 public class Display {
     
 }
-hg e hrjenrhjjjjkhkjk
-hkhkhhkjhkhkk
