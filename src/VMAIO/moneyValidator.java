@@ -2,7 +2,7 @@
 //file name: MoneyValidator.java
 //date time create: 20th of June 2019 3:24 pm
 //description: 
-
+package VMAIO;
 public class moneyValidator {
     String money;
     int moneyvalue;

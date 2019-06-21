@@ -1,4 +1,4 @@
-package vendingmachine;
+package VMAIO;
 import java.util.Scanner;
 
 class MoneySlot{
