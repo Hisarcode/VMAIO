@@ -2,7 +2,7 @@
 //file name : Product.java
 //date time create : 23rd of May 2019. 8.59 p.m.
 //description : make atributs of product
-package VMAIO;
+package vendingmachine;
 import java.util.Scanner;
 
 public class moneyCollector

@@ -1,47 +1,75 @@
-//Name: Mohamad Syazimmi Hersyaputra (D1041171026)
-//file name: MoneyValidator.java
-//date time create: 20th of June 2019 3:24 pm
-//description: 
-package VMAIO;
+//Name : Muhammad Syazimmi Hersyaputra (D1041171045)
+//file name : Product.java
+//date time create : 23rd of May 2019. 8.59 p.m.
+//description : make atributs of product
+
+import java.util.Scanner;
+
 public class moneyValidator {
     String money;
-    int moneyvalue;
-    int total;
-    boolean condition = false;
+    int choose;
 
-    void validationMoney(String nominal ) {
-        money = nominal;
-        
-        
+    void validationMoney() {
+        Scanner input = new Scanner(System.in);
 
-        if ("5000".equals(money)) {
-            condition = true;
+        System.out.print("Input Your Money Value: ");
+        money = input.nextLine();
+
+        switch (money) {
+            case "5000":
+                System.out.println("Balance: " + money);
+                break;
+
+            case "10000":
+                System.out.println("Balance: " + money);
+                break;
+
+            case "20000":
+                System.out.println("Balance: " + money);
+                break;
+
+            case "50000":
+                System.out.println("Balance: " + money);
+                return;
+
+            default:
+                System.out.println("Money not detected! Please try again!");
+                break;
         }
-        
-        else if ("10000".equals(money)) {
-            condition = true;
+
+        do {
+            System.out.println("Increase Money: ");
+            System.out.println("1. Yes");
+            System.out.println("2. No");
+            System.out.print("Your Choice [1/2]: ");
+            choose = input.nextInt();
+            if (choose == 1) {
+                moneyValidator add = new moneyValidator();
+                add.validationMoney();
+                continue;
+            }
+
+            else if (choose == 2) {
+                break;
+            }
+
+            else if (choose != 1 && choose != 2) {
+                System.out.println("Eror! Please try again!");
+                return;
+            }
         }
-        
-        else if ("20000".equals(money)) {
-            condition = true;
-        }
-        
-        else if ("50000".equals(money)) {
-            condition = true;
-        }
-        
-        System.out.println(condition);
+        while (choose == 2);
 
     }
-    
-    void countBalance() {
-        try{    
-	moneyvalue = Integer.parseInt(money);
-        total = total + moneyvalue;
-        System.out.println("nominal: "+ moneyvalue);
-        System.out.println("jumlah: "+ total);
-        } catch(NumberFormatException e){
-            System.out.println("Uang Illegal");
-        }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int choose;
+
+        moneyValidator run = new moneyValidator();
+        run.validationMoney();
+
+        System.out.println("Product: "); // next code in product class
     }
 }

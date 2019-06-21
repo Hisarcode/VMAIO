@@ -1,7 +1,16 @@
-package VMAIO;
+package vendingmachine;
 import java.util.Scanner;
 
-
+class MoneySlot{
+    private String money;
+    
+    public void setMoney(String nominal){
+        money = nominal;
+    }
+    public String getMoney(){
+        return money;
+    }
+}
 
 class MoneyValidator{
     String money;
@@ -10,7 +19,9 @@ class MoneyValidator{
     int total;
     
     //method mengecek apakah uang atau bukan
-    public void validedMoney(){
+    public void
+         
+        validedMoney(){
         MoneySlot moneyslot = new MoneySlot();
         money = moneyslot.getMoney();
         
