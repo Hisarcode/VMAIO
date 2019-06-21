@@ -55,15 +55,13 @@ public class VM {
         String money;
         System.out.print("Masukkan uang : ");
         Scanner input = new Scanner(System.in);
-      
+        //ambil nilai money panggil set & get money;
         MoneySlot Slot = new MoneySlot();
         money = input.nextLine();
         Slot.setMoney(money);
         Slot.getMoney();
-        
-        //ambil nilai money panggil set & get money;
-
         //validedmoney
+        validedMoney check = new validedMoney();
         // money valid
 
           //pilih produk (display)+(button)

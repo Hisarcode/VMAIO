@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class Money
+public class moneyCollector
 {
     public static void main(String[] args)
     {
