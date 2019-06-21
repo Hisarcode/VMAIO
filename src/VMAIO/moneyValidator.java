@@ -9,30 +9,41 @@ public class moneyValidator {
     int total;
     boolean condition = false;
 
-    void validationMoney() {
-        if (money == "5000") {
+    void validationMoney(String nominal ) {
+        money = nominal;
+        System.out.println(money);
+        System.out.println(this.money);
+
+        
+
+        if ("5000".equals(money)) {
             condition = true;
         }
         
-        else if (money == "10000") {
+        else if ("10000".equals(money)) {
             condition = true;
         }
         
-        else if (money == "20000") {
+        else if ("20000".equals(money)) {
             condition = true;
         }
         
-        else if (money == "50000") {
+        else if ("50000".equals(money)) {
             condition = true;
         }
         
-        else {
-            condition = false;
-        }
+        System.out.println(condition);
+
     }
     
     void countBalance() {
+        try{    
 	moneyvalue = Integer.parseInt(money);
         total = total + moneyvalue;
+        System.out.println("nominal: "+ moneyvalue);
+        System.out.println("jumlah: "+ total);
+        } catch(NumberFormatException e){
+            System.out.println("Uang Illegal");
+        }
     }
 }

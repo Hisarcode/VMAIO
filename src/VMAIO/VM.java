@@ -18,6 +18,7 @@ public class VM {
      */
     
     public static void main (String[] args) {
+        Product nProduct = new Product();
         bottle1 Cola = new bottle1();
         Cola.setNama();
         Cola.setHarga();
@@ -56,12 +57,16 @@ public class VM {
         System.out.print("Masukkan uang : ");
         Scanner input = new Scanner(System.in);
         //ambil nilai money panggil set & get money;
-        MoneySlot Slot = new MoneySlot();
         money = input.nextLine();
+        moneySlot Slot = new moneySlot(money);
+
         Slot.setMoney(money);
-        Slot.getMoney();
+       
         //validedmoney
-        validedMoney check = new validedMoney();
+        moneyValidator check = new moneyValidator();
+        check.validationMoney(Slot.getMoney());
+        check.countBalance();
+        
         // money valid
 
           //pilih produk (display)+(button)
