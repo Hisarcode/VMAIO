@@ -11,9 +11,7 @@ public class moneyValidator {
 
     void validationMoney(String nominal ) {
         money = nominal;
-        System.out.println(money);
-        System.out.println(this.money);
-
+        
         
 
         if ("5000".equals(money)) {

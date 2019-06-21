@@ -1,4 +1,4 @@
-package VMAIO8;
+package VMAIO;
 import java.util.Scanner;
 
 
